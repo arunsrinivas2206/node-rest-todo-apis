@@ -1,0 +1,15 @@
+{
+  "name": "node_mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Arun Srinivas <arunsrinivas.venkatesh@yahoo.com> (http://cuckoopost.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "2.2.5"
+  }
+}
