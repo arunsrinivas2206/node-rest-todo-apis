@@ -20,11 +20,11 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
 	// 	console.log('unable to fetch the documents');
 	// });
 
-	db.collection('Users').find({name: 'Arun'}).toArray().then((res) => {
-		console.log('User as Arun are ' + JSON.stringify(res, undefined, 2));
-	}, (err) => {
-		console.log("Unable to fetch ", err);
-	})
+	// db.collection('Users').find({name: 'Arun'}).toArray().then((res) => {
+	// 	console.log('User as Arun are ' + JSON.stringify(res, undefined, 2));
+	// }, (err) => {
+	// 	console.log("Unable to fetch ", err);
+	// });
 
 	// db.collection('Todos').insertOne({text: 'Tennis at Motta maadi', completed: false}, (err, res) => {
 	// 	if(err) {
@@ -40,5 +40,34 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
 	// 	console.log(JSON.stringify(res.ops, undefined, 2));
 	// 	console.log(res.ops[0]._id.getTimestamp());
 	// });
-	db.close();
+
+
+	// Delete data
+	// deleteMany
+	// db.collection('Todos').deleteMany({text: 'Eat lunch'}).then((res) => {
+	// 	console.log(res);
+	// });
+
+	// deleteOne
+	// db.collection('Todos').deleteOne({text: 'dance class'}).then((res) => {
+	// 	console.log(res);
+	// });
+
+	// findOneAndDelete
+	// db.collection('Todos').findOneAndDelete({text: 'singing'}).then((res) => {
+	// 	console.log(res);
+	// });
+
+	// db.collection('Users').deleteMany({text: 'dance class'}).then((res) => {
+	// 	console.log(res);
+	// });
+
+	// db.collection('Users').deleteMany({name: 'Arun'}).then((res) => {
+	// 	console.log(res);
+	// });
+
+	db.collection('Users').findOneAndDelete({_id: 123}).then((res) => {
+		console.log(res);
+	});
+	// db.close();
 });
